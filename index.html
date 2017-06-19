@@ -34,6 +34,70 @@
             /*background-color: red;*/
         }
         
+        blockquote {
+            border-radius: 20px;
+            text-align: center;
+            display: block;
+            background: #fff;
+            padding: 15px 20px 15px 20px!important;
+            /*margin: 0 0 20px;*/
+            position: relative;
+            /*Font*/
+            font-family: Georgia, serif;
+            font-size: 16px;
+            line-height: 1.2;
+            color: #666;
+            /*text-align: justify;*/
+            /*Borders - (Optional)*/
+            /*border-left: 15px solid #c76c0c;
+            border-right: 2px solid #c76c0c;*/
+            /*Box Shadow - (Optional)*/
+            -moz-box-shadow: 2px 2px 15px #ccc;
+            -webkit-box-shadow: 2px 2px 15px #ccc;
+            box-shadow: 2px 2px 15px #ccc;
+        }
+        
+        blockquote::before {
+            content: "\201C";
+            /*Unicode for Left Double Quote*/
+            /*Font*/
+            font-family: Georgia, serif;
+            font-size: 60px;
+            font-weight: bold;
+            color: #999;
+            /*Positioning*/
+            position: absolute;
+            left: 15px;
+            top: -3px;
+        }
+        
+        blockquote::after {
+            content: "\201D";
+            font-family: Georgia, serif;
+            font-size: 60px;
+            font-weight: bold;
+            color: #999;
+            position: absolute;
+            right: 10px;
+            top: 5px;
+        }
+        
+        blockquote a {
+            text-decoration: none;
+            background: #eee;
+            cursor: pointer;
+            padding: 3px;
+            color: #c76c0c;
+        }
+        
+        blockquote a:hover {
+            color: #666;
+        }
+        
+        blockquote em {
+            font-style: italic;
+        }
+        
         section {
             /*background-color: green;*/
         }
@@ -70,81 +134,48 @@
         }
         
         .firstH {
-            margin-top: 80px!important;
+            margin-top: 130px!important;
             text-align: center;
+            width: 80%;
+            margin: auto;
+            padding: 0%;
         }
         
         header {
             font-size: 20px;
             font-family: 'Titillium Web', sans-serif;
             color: #eee;
-            background-color: #fffdd0;
-            height: 5em;
+            /*background-color: rgba(255, 253, 208, 0.6);*/
+            margin: 20px 30px;
+            /*height: 5em;*/
             border-radius: 10px;
+            /*: 100%;*/
         }
         
         header h1 {
             /*padding: 1.6em;*/
         }
         
-        blockquote {
-            display: block;
-            background: #fff;
-            padding: 15px 20px 15px 45px;
-            margin: 0 0 20px;
-            position: relative;
-            /*Font*/
-            font-family: Georgia, serif;
-            font-size: 16px;
-            line-height: 1.2;
-            color: #666;
-            text-align: justify;
-            /*Borders - (Optional)*/
-            border-left: 15px solid #c76c0c;
-            border-right: 2px solid #c76c0c;
-            /*Box Shadow - (Optional)*/
-            -moz-box-shadow: 2px 2px 15px #ccc;
-            -webkit-box-shadow: 2px 2px 15px #ccc;
-            box-shadow: 2px 2px 15px #ccc;
-        }
-        
-        blockquote::before {
-            content: "\201C";
-            /*Unicode for Left Double Quote*/
-            /*Font*/
-            font-family: Georgia, serif;
-            font-size: 60px;
-            font-weight: bold;
-            color: #999;
-            /*Positioning*/
-            position: absolute;
-            left: 10px;
-            top: 5px;
-        }
-        
-        blockquote::after {
-            /*Reset to make sure*/
-            content: "";
-        }
-        
-        blockquote a {
-            text-decoration: none;
-            background: #eee;
-            cursor: pointer;
-            padding: 3px;
-            color: #c76c0c;
-        }
-        
-        blockquote a:hover {
-            color: #666;
-        }
-        
-        blockquote em {
-            font-style: italic;
-        }
-        
         .definer {
             font-size: 150%;
+            color: #222;
+            line-height: 50px;
+            padding-bottom: 10px;
+        }
+        
+        .sectionhead {
+            /*margin-left: 6em;*/
+            transform: translate(0px, 20px);
+            border-radius: 2% 2% 600% 600%;
+            z-index: 1000;
+            background-color: rgba(34, 34, 34, 0.95);
+            font-size: 2.5em;
+            padding-bottom: 14px;
+            position: absolute;
+            left: 40%;
+            width: 20%;
+            color: #bbb;
+            text-align: center;
         }
     </style>
 </head>
@@ -154,12 +185,16 @@
         <a href="http://www.iitm.ac.in" target="_blank">
             <img src="logo.png" class="logoimg">
         </a>
-        <div class="insight101"><span class="emp">Story of You</span> - a first glimpse into the life of a freshman at IIT Madras</div>
+        <div class="insight101">
+            <span class="emp">Story of You</span> - a first glimpse into the life of a freshman at IIT Madras
+        </div>
+        <div class="sectionhead">Know Your Insti</div>
     </div>
 
     <header class="cd-container">
         <section class="firstH">
-            <h1><span class="definer">Know your insti</span>
+            <h1>
+                <!--<span class="definer">Know your insti</span>-->
                 <blockquote>When you dance, your purpose is not to get to a certain place on the floor. It's to enjoy each step along the way.</blockquote>
             </h1>
         </section>
@@ -175,7 +210,7 @@
                 <h2>Title of section 1</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
                 <a href="#0" class="cd-read-more">Read more</a>
-                <span class="cd-date">Jan 14</span>
+                <!--<span class="cd-date">Jan 14</span>-->
             </div>
             <!-- cd-timeline-content -->
         </div>
@@ -191,7 +226,7 @@
                 <h2>Title of section 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
                 <a href="#0" class="cd-read-more">Read more</a>
-                <span class="cd-date">Jan 18</span>
+                <!--<span class="cd-date">Jan 18</span>-->
             </div>
             <!-- cd-timeline-content -->
         </div>
@@ -210,7 +245,7 @@
                     eligendi quis fugiat aliquam sunt similique aut adipisci.
                 </p>
                 <a href="#0" class="cd-read-more">Read more</a>
-                <span class="cd-date">Jan 24</span>
+                <!--<span class="cd-date">Jan 24</span>-->
             </div>
             <!-- cd-timeline-content -->
         </div>
@@ -226,7 +261,7 @@
                 <h2>Title of section 4</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
                 <a href="#0" class="cd-read-more">Read more</a>
-                <span class="cd-date">Feb 14</span>
+                <!--<span class="cd-date">Feb 14</span>-->
             </div>
             <!-- cd-timeline-content -->
         </div>
@@ -242,7 +277,7 @@
                 <h2>Title of section 5</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
                 <a href="#0" class="cd-read-more">Read more</a>
-                <span class="cd-date">Feb 18</span>
+                <!--<span class="cd-date">Feb 18</span>-->
             </div>
             <!-- cd-timeline-content -->
         </div>
@@ -257,7 +292,7 @@
             <div class="cd-timeline-content">
                 <h2>Final Section</h2>
                 <p>This is the content of the last section</p>
-                <span class="cd-date">Feb 26</span>
+                <!--<span class="cd-date">Feb 26</span>-->
             </div>
             <!-- cd-timeline-content -->
         </div>
