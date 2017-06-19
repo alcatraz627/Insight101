@@ -22,14 +22,15 @@
         /*Quote*/
         
         body {
-            background-image: url('buck.jpg');
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
+            background-image: url('guru.png');
+            -webkit-background-size: 100% 100%;
+            -moz-background-size: 100% 100%;
+            -o-background-size: 100% 100%;
+            background-size: 100% 100%;
             background-attachment: fixed;
             /*background-size: stretch;*/
             font-family: 'Pangolin', cursive;
+            /*backdrop-filter: blur(5px);*/
             /*background-color: red;*/
         }
         
@@ -77,13 +78,13 @@
             font-size: 20px;
             font-family: 'Titillium Web', sans-serif;
             color: #eee;
-            background-color: #225;
+            background-color: #fffdd0;
             height: 5em;
             border-radius: 10px;
         }
         
         header h1 {
-            padding: 1.6em;
+            /*padding: 1.6em;*/
         }
         
         blockquote {
@@ -130,7 +131,7 @@
             text-decoration: none;
             background: #eee;
             cursor: pointer;
-            padding: 0 3px;
+            padding: 3px;
             color: #c76c0c;
         }
         
@@ -140,6 +141,10 @@
         
         blockquote em {
             font-style: italic;
+        }
+        
+        .definer {
+            font-size: 150%;
         }
     </style>
 </head>
@@ -154,7 +159,7 @@
 
     <header class="cd-container">
         <section class="firstH">
-            <h1>
+            <h1><span class="definer">Know your insti</span>
                 <blockquote>When you dance, your purpose is not to get to a certain place on the floor. It's to enjoy each step along the way.</blockquote>
             </h1>
         </section>
