@@ -154,7 +154,11 @@ Main components
    }
    
    .cd-timeline-img.cd-location {
-       background: #f0ca45;
+       background: #75CE66;
+   }
+
+   .hostel-color{
+       background: #a52a2a!important;
    }
    
    @media only screen and (min-width: 1170px) {
