@@ -136,7 +136,9 @@ jQuery(document).ready(function($) {
                 title: h,
                 // text: "A custom <span style=\"color: #F8BB86 \">html<span> message.",
                 text: data,
-                html: true
+                html: true,
+                confirmButtonText: "Dismiss",
+                customClass: "modalClass"
             });
 
         });

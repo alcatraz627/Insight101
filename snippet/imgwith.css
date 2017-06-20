@@ -1,0 +1,87 @@
+   .container {
+       overflow-y: scroll;
+       max-height: 22em;
+   }
+   
+   .lib-panel {
+       margin-bottom: 1px;
+       padding-bottom: 1px;
+   }
+   
+   .lib-panel img {
+       width: 70px;
+       background-color: transparent;
+   }
+   
+   .lib-panel .row {
+       padding-top: 7px;
+       background-color: #FFFFFF;
+   }
+   
+   .lib-panel .lib-row {
+       padding: 0 20px 0 20px;
+   }
+   
+   .lib-panel .lib-row.lib-header {
+       background-color: #FFFFFF;
+       font-size: 20px;
+       padding: 5px 20px 0 20px;
+   }
+   
+   .lib-panel .lib-row.lib-header .lib-header-seperator {
+       height: 2px;
+       width: 26px;
+       background-color: #d9d9d9;
+       margin: 2px 0 2px 0;
+   }
+   
+   .lib-panel .lib-row.lib-desc {
+       position: relative;
+       height: 100%;
+       display: block;
+       font-size: 13px;
+   }
+   
+   .lib-panel .lib-row.lib-desc a {
+       position: absolute;
+       width: 100%;
+       bottom: 10px;
+       left: 20px;
+   }
+   
+   .row-margin-bottom {
+       margin-bottom: 20px;
+   }
+   
+   .box-shadow {
+       -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+       box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+       text-align: left;
+       padding: 10px;
+       margin: 0 20px;
+       transition: 0.1s box-shadow linear;
+   }
+   
+   .box-shadow:hover {
+       -webkit-box-shadow: 3px 5px 6px 0 rgba(0, 0, 0, .3);
+       box-shadow: 3px 5px 6px 0 rgba(0, 0, 0, .3);
+   }
+   
+   .col-md-5 {
+       align: relative;
+       height: 75px;
+       width: 500;
+       padding-bottom: 15px;
+       margin-top: 15px;
+       margin-bottom: 40px;
+       /*margin-left: 35px;*/
+   }
+   
+   .col-md-6 img {
+       padding-left: 10px;
+       padding-top: 6px;
+       width: 90px!important;
+       height: 90px!important;
+       float: left;
+       padding-right: 10px;
+   }

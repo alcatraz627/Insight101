@@ -35,6 +35,46 @@ section {
     /*background-color: green;*/
 }
 
+.blockquote {
+    border-radius: 20px;
+    /*display: block;*/
+    background: #fff;
+    padding: 15px 20px 15px 20px!important;
+    position: relative;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #666;
+    -moz-box-shadow: 2px 2px 15px #ccc;
+    -webkit-box-shadow: 2px 2px 15px #ccc;
+    box-shadow: 2px 2px 15px #ccc;
+    text-align: center;
+}
+
+.blockquote::before {
+    content: "\201C";
+    /*Unicode for Left Double Quote*/
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #999;
+    position: absolute;
+    left: 5px;
+    top: -3px;
+}
+
+.blockquote::after {
+    content: "\201D";
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #999;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
 .about {
     /*float: right;*/
     text-align: center;
@@ -451,4 +491,13 @@ p.panelcont {
 p.panelcont:hover {
     background: rgba(255, 255, 255, 0.7);
     transition: all 0.4s ease-in-out;
+}
+
+.modalClass {
+    background-color: rgba(255, 255, 255, 0.9)!important;
+    width: 75%!important;
+    left: 37.5%!important;
+    max-height: 90%;
+    overflow-y: scroll;
+    padding: 20px;
 }
