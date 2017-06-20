@@ -211,9 +211,19 @@ jQuery(document).ready(function($) {
                 $("#progress").attr('max', max);
                 $("progress").attr('value', pos);
 
-                // if()
+                var header = "IIT Madras";
+                // if (pos > 0 && pos < 1346) header = "Know your Insti";
+                // if (pos > 1346 && pos < 2160) header = "Second Impressions";
+                // if (pos > 2160 && pos < 3930) header = "Sprouting Wings";
+                // if (pos > 3930 && pos < 4960) header = "Together, we all";
+                // if (pos > 4960) header = "Life Ahead";
                 // var value = $(window).scrollTop();
-                $("div.sectionhead").text("Bleh" + pos);
+                if (pos > 0 && pos < 1747) header = "Know your Insti";
+                if (pos > 1747 && pos < 2940) header = "Second Impressions";
+                if (pos > 2940 && pos < 5302) header = "Sprouting Wings";
+                if (pos > 5302 && pos < 6835) header = "Together, we all";
+                if (pos > 6835) header = "Life Ahead";
+                $("div.sectionhead").text(header); //+ "(" + pos + ")");
             });
         }
         $window.bind('scroll', update).resize(update);
