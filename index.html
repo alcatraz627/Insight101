@@ -12,6 +12,72 @@
     <link rel="stylesheet" type="text/css" href="styles/reset.min.css">
     <link rel="stylesheet" type="text/css" href="styles/animate.css">
     <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
+    <style>
+        blockquote {
+            border-radius: 20px;
+            text-align: center;
+            display: block;
+            background: #fff;
+            padding: 15px 20px 15px 20px!important;
+            /*margin: 0 0 20px;*/
+            position: relative;
+            /*Font*/
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 16px;
+            line-height: 1.2;
+            color: #666;
+            /*text-align: justify;*/
+            /*Borders - (Optional)*/
+            /*border-left: 15px solid #c76c0c;
+    border-right: 2px solid #c76c0c;*/
+            /*Box Shadow - (Optional)*/
+            -moz-box-shadow: 2px 2px 15px #ccc;
+            -webkit-box-shadow: 2px 2px 15px #ccc;
+            box-shadow: 2px 2px 15px #ccc;
+        }
+        
+        blockquote::before {
+            content: "\201C";
+            /*Unicode for Left Double Quote*/
+            /*Font*/
+            font-family: Georgia, serif;
+            font-size: 60px;
+            font-weight: bold;
+            color: #999;
+            /*Positioning*/
+            position: absolute;
+            left: 15px;
+            top: -3px;
+        }
+        
+        blockquote::after {
+            content: "\201D";
+            font-family: Georgia, serif;
+            font-size: 60px;
+            font-weight: bold;
+            color: #999;
+            position: absolute;
+            right: 10px;
+            top: 5px;
+        }
+        
+        blockquote a {
+            text-decoration: none;
+            background: #eee;
+            cursor: pointer;
+            padding: 3px;
+            color: #c76c0c;
+        }
+        
+        blockquote a:hover {
+            color: #666;
+        }
+        
+        blockquote em {
+            font-style: italic;
+        }
+    </style>
 </head>
 
 <body>
@@ -44,7 +110,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-picture">
-                    <img class="imgo" src="gate.png" alt="Picture">
+                    <img class="imgo" src="images/gate.png" alt="Picture">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Selfie at Main Gate</h2>
@@ -54,18 +120,19 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-movie">
-                    <img class="bus" src="bus.png" alt="Movie">
+                    <img class="bus" src="images/bus.png" alt="Movie">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Free Bus Service</h2>
-                    <p>gif</p>
+                    <p>How?</p>
+                    <a href="#0" id="bus" class="cd-read-more" title="This is how">See How</a>
                 </div>
             </div>
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-location">
-                    <!--<img class="imgo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-location.svg" alt="Picture">-->
-                    <img class="imgo" src="map.png" alt="Picture">
+                    <!--<img class="imgo" src="images/https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-location.svg" alt="Picture">-->
+                    <img class="imgo" src="images/map.png" alt="Picture">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Places in Insti<small>(tute)</small></h2>
@@ -78,7 +145,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-picture">
-                    <img class="imgo" src="hostel.png" alt="Location">
+                    <img class="imgo" src="images/hostel.png" alt="Location">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Hostel</h2>
@@ -89,7 +156,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-movie">
-                    <img class="imgo" src="cafe.png" alt="Location">
+                    <img class="imgo" src="images/cafe.png" alt="Location">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Eateries in Campus/h2>
@@ -100,7 +167,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-picture">
-                    <img class="imgo" src="cart2.png" alt="Movie">
+                    <img class="imgo" src="images/cart2.png" alt="Movie">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Shopping</h2>
@@ -111,7 +178,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-movie">
-                    <img class="imgo" src="cafe.png" alt="Location">
+                    <img class="imgo" src="images/cafe.png" alt="Location">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>In the evening</h2>
@@ -136,7 +203,7 @@
         <section id="cd-timeline" class="cd-container">
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-picture">
-                    <img class="imgo" src="orin.png" alt="Picture">
+                    <img class="imgo" src="images/orin.png" alt="Picture">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Orientaion</h2>
@@ -148,7 +215,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-picture">
-                    <img class="imgo" src="emergency.png" alt="Movie">
+                    <img class="imgo" src="images/emergency.png" alt="Movie">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Care away from Home</h2>
@@ -159,7 +226,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-movie">
-                    <img class="imgo" src="dept.png" alt="Picture">
+                    <img class="imgo" src="images/dept.png" alt="Picture">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Department Orientation</h2>
@@ -187,7 +254,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-picture">
-                    <img class="imgo" src="claas.png" alt="Picture">
+                    <img class="imgo" src="images/claas.png" alt="Picture">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>And the Semester Begins</h2>
@@ -199,7 +266,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-movie">
-                    <img class="imgo" src="books.png" alt="Movie">
+                    <img class="imgo" src="images/books.png" alt="Movie">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Acads</h2>
@@ -210,7 +277,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-picture">
-                    <img class="imgo" src="NSS.png" alt="Picture">
+                    <img class="imgo" src="images/NSS.png" alt="Picture">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Run for Fun</h2>
@@ -221,7 +288,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-location">
-                    <img class="imgo" src="bodies.png" alt="Location">
+                    <img class="imgo" src="images/bodies.png" alt="Location">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Work for Fun</h2>
@@ -232,7 +299,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-picture">
-                    <img class="imgo" src="music.png" alt="Movie">
+                    <img class="imgo" src="images/music.png" alt="Movie">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>We also have Clubs</h2>
@@ -244,7 +311,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-location">
-                    <img class="imgo" src="law.png" alt="Location">
+                    <img class="imgo" src="images/law.png" alt="Location">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>SLC</h2>
@@ -256,7 +323,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-location">
-                    <img class="imgo" src="comp.png" alt="Location">
+                    <img class="imgo" src="images/comp.png" alt="Location">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Hostel ka Game of Thrones</h2>
@@ -267,7 +334,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-movie">
-                    <img class="imgo" src="gym.png" alt="Movie">
+                    <img class="imgo" src="images/gym.png" alt="Movie">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>For the Fitness lover</h2>
@@ -278,7 +345,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-location">
-                    <img class="imgo" src="culture.png" alt="Location">
+                    <img class="imgo" src="images/culture.png" alt="Location">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Culture at Insti</h2>
@@ -303,7 +370,7 @@
         <section id="cd-timeline" class="cd-container">
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-picture">
-                    <img class="imgo" src="web.png" alt="Picture">
+                    <img class="imgo" src="images/web.png" alt="Picture">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Course Structure</h2>
@@ -315,7 +382,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-movie">
-                    <img class="imgo" src="elec.png" alt="Movie">
+                    <img class="imgo" src="images/elec.png" alt="Movie">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Institute Elections</h2>
@@ -326,7 +393,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-picture">
-                    <img class="imgo" src="por.png" alt="Picture">
+                    <img class="imgo" src="images/por.png" alt="Picture">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Positions of Responsibility</h2>
@@ -340,7 +407,7 @@
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-location">
-                    <img class="imgo" src="nite.png" alt="Location">
+                    <img class="imgo" src="images/nite.png" alt="Location">
                 </div>
                 <div class="cd-timeline-content">
                     <h2>Hostel Nights</h2>
@@ -394,13 +461,7 @@
         </div>
     </div>
 </body>
-<!--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
 <script type="text/javascript" src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
-<!--<script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>-->
-<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>-->
-<!--<script type="text/javascript" src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>-->
-<!--<script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>-->
-
 <script type="text/javascript" src="scripts/jquery.min.js"></script>
 <script type="text/javascript" src="scripts/modernizr.js"></script>
 <script type="text/javascript" src="sweetalert-master/dist/sweetalert.min.js"></script>
@@ -408,6 +469,5 @@
 <script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
 <script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
 <script type="text/javascript" src="scripts/widgets.js"></script>
-
 
 </html>
