@@ -223,10 +223,30 @@ jQuery(document).ready(function($) {
                 if (pos > 2940 && pos < 5302) header = "Sprouting Wings";
                 if (pos > 5302 && pos < 6835) header = "Together, we all";
                 if (pos > 6835) header = "Life Ahead";
+                if (pos > max - 1 && localStorage.displayed !== 'showed') {
+                    swal({
+                        // title: "HTML <small>Title</small>!",
+                        title: "Guess What",
+                        // text: "A custom <span style=\"color: #F8BB86 \">html<span> message.",
+                        text: "And this is just half of it, for the rest half resides in the feel of being a part of it",
+                        confirmButtonText: "Wow",
+                        // customClass: "modalClass"
+                    });
+                    // So that is is onlt displayed once
+                    localStorage.displayed = "showed";
+                }
+                console.log("DocHeight:" + docHeight);
+                console.log("WinHeight:" + winHeight);
+                console.log("Pos:" + pos);
+
                 $("div.sectionhead").text(header); //+ "(" + pos + ")");
             });
         }
         $window.bind('scroll', update).resize(update);
         update();
+        //So that the localstorage item is changed on closing/reloading
+        $window.unload(function() {
+            localStorage.displayed = undefined;
+        })
     };
 })(jQuery);
