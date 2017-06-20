@@ -5,15 +5,28 @@
     <meta charset='UTF-8'>
     <script src="jquery.min.js"></script>
     <script src="modernizr.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" type="text/css" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="styles/template.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/parallax.css">
+    <link rel="stylesheet" type="text/css" href="styles/reset.min.css">
     <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/animatedModal.js"></script>
+    <script type="text/javascript" src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+    <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
+    <script type="text/javascript" src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+    <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
     <script src="sweetalert-master/dist/sweetalert.min.js"></script>
-    <!--<link rel="stylesheet" href="bootstrap.css">-->
-    <!--<link rel="stylesheet" href="bootstrap.js">-->
-    <link rel='stylesheet prefetch' href='reset.min.css'>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC');
         /*Header*/
@@ -29,527 +42,11 @@
         
         @import url('https://fonts.googleapis.com/css?family=Amiri');
         /*Accordion*/
-        
-        body {
-            background-image: url('guru.png');
-            -webkit-background-size: 100% 100%;
-            -moz-background-size: 100% 100%;
-            -o-background-size: 100% 100%;
-            background-size: 100% 100%;
-            background-attachment: fixed;
-            /*background-size: stretch;*/
-            font-family: 'Pangolin', cursive;
-            /*backdrop-filter: blur(5px);*/
-            /*background-color: red;*/
-        }
-        
-        blockquote {
-            border-radius: 20px;
-            text-align: center;
-            display: block;
-            background: #fff;
-            padding: 15px 20px 15px 20px!important;
-            /*margin: 0 0 20px;*/
-            position: relative;
-            /*Font*/
-            font-family: Georgia, serif;
-            font-style: italic;
-            font-size: 16px;
-            line-height: 1.2;
-            color: #666;
-            /*text-align: justify;*/
-            /*Borders - (Optional)*/
-            /*border-left: 15px solid #c76c0c;
-            border-right: 2px solid #c76c0c;*/
-            /*Box Shadow - (Optional)*/
-            -moz-box-shadow: 2px 2px 15px #ccc;
-            -webkit-box-shadow: 2px 2px 15px #ccc;
-            box-shadow: 2px 2px 15px #ccc;
-        }
-        
-        blockquote::before {
-            content: "\201C";
-            /*Unicode for Left Double Quote*/
-            /*Font*/
-            font-family: Georgia, serif;
-            font-size: 60px;
-            font-weight: bold;
-            color: #999;
-            /*Positioning*/
-            position: absolute;
-            left: 15px;
-            top: -3px;
-        }
-        
-        blockquote::after {
-            content: "\201D";
-            font-family: Georgia, serif;
-            font-size: 60px;
-            font-weight: bold;
-            color: #999;
-            position: absolute;
-            right: 10px;
-            top: 5px;
-        }
-        
-        blockquote a {
-            text-decoration: none;
-            background: #eee;
-            cursor: pointer;
-            padding: 3px;
-            color: #c76c0c;
-        }
-        
-        blockquote a:hover {
-            color: #666;
-        }
-        
-        blockquote em {
-            font-style: italic;
-        }
-        
-        section {
-            /*background-color: green;*/
-        }
-        
-        .about {
-            /*float: right;*/
-            text-align: center;
-            font-family: 'Titillium Web', sans-serif;
-        }
-        
-        .topheader {
-            padding: 20px;
-            top: 0px;
-            position: fixed;
-            width: 100%;
-            /*margin-left: 0.5%;*/
-            border-radius: 2px 2px 10px 10px;
-            z-index: 1000;
-            background-color: rgba(34, 34, 34, 0.95);
-            font-family: 'Patrick Hand SC', cursive;
-        }
-        
-        .logoimg {
-            width: 7em;
-            top: 1em;
-            -webkit-filter: blur(1px);
-            /* Safari 6.0 - 9.0 */
-            filter: blur(1px);
-            position: absolute;
-            transition: all 0.4s ease-in-out;
-        }
-        
-        .logoimg:hover {
-            -webkit-filter: blur(0px);
-            /* Safari 6.0 - 9.0 */
-            filter: blur(0px);
-        }
-        
-        .insight101 {
-            margin-left: 6em;
-            font-size: 1.5em;
-            color: #bbb;
-            /*text-align: center;*/
-            /*vertical-align: center;*/
-        }
-        
-        .emp {
-            color: #eee;
-            font-size: 1.6em;
-        }
-        
-        .firstH {
-            /*margin-top: 130px!important;*/
-            text-align: center;
-            width: 100%;
-            margin: auto;
-            padding: 0%;
-            padding-top: 30px;
-        }
-        
-        header {
-            font-size: 20px;
-            font-family: 'Titillium Web', sans-serif;
-            color: #eee;
-            /*background-color: rgba(255, 253, 208, 0.6);*/
-            margin: 20px 30px;
-            /*height: 5em;*/
-            border-radius: 10px;
-            /*: 100%;*/
-        }
-        
-        header h1 {
-            /*padding: 1.6em;*/
-        }
-        
-        .definer {
-            font-size: 150%;
-            color: #222;
-            line-height: 50px;
-            padding-bottom: 10px;
-        }
-        
-        .sectionhead {
-            /*margin-left: 6em;*/
-            transform: translate(0px, 20px);
-            border-radius: 2% 2% 600% 600%;
-            z-index: 1000;
-            background-color: rgba(34, 34, 34, 0.95);
-            font-size: 2.5em;
-            padding-bottom: 14px;
-            position: absolute;
-            left: 40%;
-            width: 20%;
-            color: #bbb;
-            text-align: center;
-        }
-        
-        div.unit {
-            position: relative;
-            overflow: visible;
-            height: 170%;
-            -webkit-filter: blur(3px);
-            -moz-filter: blur(3px);
-            -o-filter: blur(3px);
-            -ms-filter: blur(3px);
-            filter: blur(3px);
-            transition: 0.25s -webkit-filter linear;
-            transition-delay: 3s;
-            /*transition: filter 0.9s ease-in-out;*/
-            /*margin: 50px 0;*/
-        }
-        
-        div.unit:hover {
-            -webkit-filter: blur(0px);
-            -moz-filter: blur(0px);
-            -o-filter: blur(0px);
-            -ms-filter: blur(0px);
-            filter: blur(0px);
-            transition-delay: 0s;
-        }
-        /*Go to top button*/
-        
-        #myBtn {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Fixed/sticky position */
-            bottom: 20px;
-            /* Place the button at the bottom of the page */
-            right: 30px;
-            /* Place the button 30px from the right */
-            z-index: 99;
-            /* Make sure it does not overlap */
-            border: none;
-            /* Remove borders */
-            outline: none;
-            /* Remove outline */
-            background-color: rgba(34, 34, 34, 0.4);
-            /* Set a background color */
-            color: white;
-            /* Text color */
-            cursor: pointer;
-            /* Add a mouse pointer on hover */
-            padding: 7px 10px;
-            /* Some padding */
-            border-radius: 6px;
-            /* Rounded corners */
-        }
-        
-        #myBtn:hover {
-            background-color: rgba(34, 34, 34, 0.6);
-            /* Add a dark-grey background on hover */
-        }
-        /*For the up arrow*/
-        
-        i {
-            border: solid white;
-            border-width: 0 3px 3px 0;
-            display: inline-block;
-            padding: 3px;
-        }
-        
-        .right {
-            transform: rotate(-45deg);
-            -webkit-transform: rotate(-45deg);
-        }
-        
-        .left {
-            transform: rotate(135deg);
-            -webkit-transform: rotate(135deg);
-        }
-        
-        .up {
-            transform: rotate(-135deg);
-            -webkit-transform: rotate(-135deg);
-        }
-        
-        .down {
-            transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-        }
-        
-        p#countdown {
-            width: 100%;
-            text-align: center;
-            font-size: 40px;
-            font-family: 'Rajdhani', sans-serif;
-        }
-        /*Progress Bar*/
-        
-        progress {
-            /* Positioning */
-            position: fixed;
-            left: 0;
-            top: 0;
-            /* Dimensions */
-            width: 100%;
-            height: 5px;
-            /* Reset the appearance */
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            /* Get rid of the default border in Firefox/Opera. */
-            border: none;
-            /* Progress bar container for Firefox/IE10+ */
-            background-color: transparent;
-            /*background-image: -webkit-linear-gradient(left, transparent, red);*/
-            /* Progress bar value for IE10+ */
-            color: red;
-            /*color: rgb(120, 31, 25);*/
-        }
-        
-        progress::-webkit-progress-bar {
-            background-color: transparent;
-            /*background-image: -webkit-linear-gradient(left, transparent, red);*/
-        }
-        
-        progress::-webkit-progress-value {
-            background-image: -webkit-linear-gradient(left, transparent, red);
-            /*background-color: red;*/
-        }
-        
-        progress::-moz-progress-bar {
-            /*background-color: rgb(120, 31, 25);*/
-            background-color: transparent;
-            background-image: -moz-linear-gradient(left, transparent, red);
-            /*background-color: red;*/
-        }
-        
-        .imgo {
-            width: 35px!important;
-            height: 35px!important;
-            left: 42.3%!important;
-            top: 43%!important;
-        }
-        
-        .bus {
-            width: 38px!important;
-            height: 68px!important;
-            left: 41%!important;
-            top: 21%!important;
-        }
-        /*Modal*/
-        /* The Modal (background) */
-        
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
-        }
-        /* Modal Content/Box */
-        
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            /* 15% from the top and centered */
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            /* Could be more or less, depending on screen size */
-        }
-        /* The Close Button */
-        
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        /*Modal Button*/
-        
-        .cd-read-more {
-            padding: 15px 25px;
-            /*font-size: 24px;*/
-            text-align: center;
-            cursor: pointer;
-            outline: none;
-            /*color: #fff;*/
-            /*background-color: #4CAF50;*/
-            border: none;
-            /*border-radius: 15px;*/
-            box-shadow: 0 6px #999;
-            /**/
-            float: right;
-            /*font-size: 15px;*/
-            font-size: 1rem;
-            display: inline-block;
-            float: right;
-            padding: .8em 1em;
-            background: #acb7c0;
-            color: #ffffff;
-            border-radius: 0.25em;
-        }
-        
-        .cd-read-more:hover {
-            /*background-color: #3e8e41;*/
-            background-color: #bac4cb;
-        }
-        
-        .cd-read-more:active {
-            /*background-color: #3e8e41;*/
-            box-shadow: 0 5px #666;
-            transform: translateY(4px);
-        }
-        /*Accordion*/
-        /* Style the buttons that are used to open and close the accordion panel */
-        
-        button.accordion {
-            /*background-color: #eee;*/
-            color: #444;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            font-size: 21px;
-            text-align: center;
-            border: none;
-            outline: none;
-            transition: 0.4s;
-            background: rgba(255, 255, 255, 0.8);
-            /*transition: all 2s ease-in;*/
-            /*-webkit-transition: all 2s ease-in;*/
-        }
-        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-        
-        button.accordion.active,
-        button.accordion:hover {
-            background-color: #ddd;
-        }
-        
-        button.accordion:after {
-            content: '\02795';
-            /* Unicode character for "plus" sign (+) */
-            font-size: 13px;
-            color: #777;
-            float: right;
-            margin-left: 5px;
-        }
-        
-        button.accordion.active:after {
-            content: "\2796";
-            /* Unicode character for "minus" sign (-) */
-        }
-        
-        .accordioncont {
-            background: rgba(255, 255, 255, 0.5);
-            margin: 0% 10%;
-            width: 80%;
-        }
-        
-        div.panel {
-            /*padding: 0 18px;*/
-            background-color: rgba(0, 0, 0, 0);
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-            margin: 0% 10%;
-        }
-        
-        p.panelcont {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 10px;
-            font-size: 19px;
-            color: #111;
-            text-align: justify;
-            /*font-family: 'Amiri', serif;*/
-            /*font-family: 'Calibri';*/
-            font-family: 'Times New Roman';
-            transition: all 0.4s ease-in-out;
-        }
-        
-        p.panelcont:hover {
-            background: rgba(255, 255, 255, 0.7);
-            transition: all 0.4s ease-in-out;
-        }
     </style>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="animatedModal.js"></script>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
-    <link href="style2.css" rel="stylesheet" type="text/css" />
-    <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
-    <script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
-    <script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            // $('#nav').localScroll(800);
-
-            //.parallax(xPosition, speedFactor, outerHeight) options:
-            //xPosition - Horizontal position of the element
-            //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
-            //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-            $('#intro').parallax("100%", 0.1);
-            $('#second').parallax("100%", 0.1);
-            $('#third').parallax("100%", 0.1);
-            $('#fourth').parallax("100%", 0.1);
-            $('#fifth').parallax("100%", 0.1);
-        })
-    </script>
+    <script type="text/javascript" src="scripts/parallax.js"></script>
+    <!--<script type="text/javascript" src="scripts/scrolltotop.js"></script>
+    <script type="text/javascript" src="scripts/parallax.js"></script>-->
     <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {
-            scrollFunction()
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("myBtn").style.display = "block";
-            } else {
-                document.getElementById("myBtn").style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0; // For Chrome, Safari and Opera 
-            document.documentElement.scrollTop = 0; // For IE and Firefox
-        }
     </script>
 </head>
 
@@ -743,7 +240,7 @@
                     <img class="imgo" src="books.png" alt="Movie">
                 </div>
                 <div class="cd-timeline-content">
-                    <h2>Title of section 2</h2>
+                    <h2>Acads</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
                     <a href="#0" id="care" class="cd-read-more" title="Care away from Home">Read More</a>
                 </div>
@@ -755,11 +252,9 @@
                 </div>
 
                 <div class="cd-timeline-content">
-                    <div class="cd-timeline-content">
-                        <h2>Run for Fun</h2>
-                        <p>...maybe only for a month. To know why, </p>
-                        <a href="#0" id="obt" class="cd-read-more" title="Run for Fun">Read More</a>
-                    </div>
+                    <h2>Run for Fun</h2>
+                    <p>...maybe only for a month. To know why, </p>
+                    <a href="#0" id="obt" class="cd-read-more" title="Run for Fun">Read More</a>
                 </div>
             </div>
 
@@ -767,21 +262,11 @@
                 <div class="cd-timeline-img cd-location">
                     <img class="imgo" src="bodies.png" alt="Location">
                 </div>
+
                 <div class="cd-timeline-content">
                     <h2>Work for Fun</h2>
                     <p>Now this, won't disappear. To know, </p>
-                    <a href="#0" id="obt" class="cd-read-more" title="Run for Fun">Read More</a>
-                </div>
-            </div>
-
-            <div class="cd-timeline-block">
-                <div class="cd-timeline-img cd-location">
-                    <img class="imgo" src="law.png" alt="Location">
-                </div>
-                <div class="cd-timeline-content">
-                    <h2>Title of section 5</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-                    <a href="#0" class="cd-read-more">Read more</a>
+                    <a href="#0" id="bodies" class="cd-read-more" title="Run for Fun">Read More</a>
                 </div>
             </div>
 
@@ -792,17 +277,31 @@
                 <div class="cd-timeline-content">
                     <h2>We also have Clubs</h2>
                     <p>Don't open if you don't want to get disapointed</p>
+                    <a href="#0" id="clubs" class="cd-read-more" title="Care away from Home">Read More</a>
                 </div>
             </div>
+
+
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-location">
+                    <img class="imgo" src="law.png" alt="Location">
+                </div>
+                <div class="cd-timeline-content">
+                    <h2>SLC</h2>
+                    <p>The Institute Students Legislative Council </p>
+                    <a href="#0" id="slc" class="cd-read-more" title="Care away from Home">Read More</a>
+                </div>
+            </div>
+
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-location">
                     <img class="imgo" src="comp.png" alt="Location">
                 </div>
                 <div class="cd-timeline-content">
-                    <h2> section 7</h2>
+                    <h2>Hostel ka Game of Thrones</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-                    <a href="#0" id="care" class="cd-read-more" title="Care away from Home">Read More</a>
+                    <a href="#0" id="hostelcomp" class="cd-read-more" title="Care away from Home">Read More</a>
                 </div>
             </div>
 
@@ -811,9 +310,9 @@
                     <img class="imgo" src="gym.png" alt="Movie">
                 </div>
                 <div class="cd-timeline-content">
-                    <h2>Run for Fun</h2>
+                    <h2>For the Fitness lover</h2>
                     <p>This is the content of the last section</p>
-                    <a href="#0" id="obt" class="cd-read-more" title="Run for Fun">Read More</a>
+                    <a href="#0" id="sport" class="cd-read-more" title="Run for Fun">Read More</a>
                 </div>
             </div>
 
@@ -822,9 +321,9 @@
                     <img class="imgo" src="culture.png" alt="Location">
                 </div>
                 <div class="cd-timeline-content">
-                    <h2> section 9</h2>
+                    <h2>Culture at Insti</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-                    <a href="#0" class="cd-read-more">Read more</a>
+                    <a href="#0" id="culture" class="cd-read-more" title="Culture at Insti">Read More</a>
                 </div>
             </div>
 
@@ -846,68 +345,50 @@
                 <div class="cd-timeline-img cd-picture">
                     <img class="imgo" src="web.png" alt="Picture">
                 </div>
-                <!-- cd-timeline-img -->
-
                 <div class="cd-timeline-content">
-                    <h2>Title of section 1</h2>
+                    <h2>Course Structure</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
                     </p>
-                    <a href="#0" class="cd-read-more">Read more</a>
-                    <!--<span class="cd-date">Jan 14</span>-->
+                    <a href="#0" id="coursestr" class="cd-read-more" title="Course Structure">Read More</a>
                 </div>
-                <!-- cd-timeline-content -->
             </div>
-            <!-- cd-timeline-block -->
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-movie">
                     <img class="imgo" src="elec.png" alt="Movie">
                 </div>
-                <!-- cd-timeline-img -->
-
                 <div class="cd-timeline-content">
-                    <h2>Title of section 2</h2>
+                    <h2>Institute Elections</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
-                    <a href="#0" class="cd-read-more">Read more</a>
-                    <!--<span class="cd-date">Jan 18</span>-->
+                    <a href="#0" id="elections" class="cd-read-more" title="Institute Elections">Read More</a>
                 </div>
-                <!-- cd-timeline-content -->
             </div>
-            <!-- cd-timeline-block -->
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-picture">
                     <img class="imgo" src="por.png" alt="Picture">
                 </div>
-                <!-- cd-timeline-img -->
 
                 <div class="cd-timeline-content">
-                    <h2>Title of section 3</h2>
+                    <h2>Positions of Responsibility</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum
                         quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum
                         eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.
                     </p>
-                    <a href="#0" class="cd-read-more">Read more</a>
-                    <!--<span class="cd-date">Jan 24</span>-->
+                    <a href="#0" id="elections" class="cd-read-more" title="PoRs">Read More</a>
                 </div>
-                <!-- cd-timeline-content -->
             </div>
-            <!-- cd-timeline-block -->
 
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-location">
                     <img class="imgo" src="nite.png" alt="Location">
                 </div>
-                <!-- cd-timeline-img -->
-
                 <div class="cd-timeline-content">
-                    <h2>Title of section 4</h2>
+                    <h2>Hostel Nights</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
                     </p>
-                    <a href="#0" class="cd-read-more">Read more</a>
-                    <!--<span class="cd-date">Feb 14</span>-->
+                    <a href="#0" id="elections" class="cd-read-more" title="Institute Elections">Read More</a>
                 </div>
-                <!-- cd-timeline-content -->
             </div>
             <!-- cd-timeline-block -->
         </section>
@@ -957,8 +438,6 @@
     </div>
 
 </body>
-<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
-<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script>
     var acc = document.getElementsByClassName("accordion");
     var i;
