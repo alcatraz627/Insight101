@@ -48,7 +48,7 @@ Modules - reusable parts of our design
    .cd-container {
        /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
        width: 90%;
-       max-width: 1170px;
+       max-width: 900px;
        margin: 0 auto;
    }
    
@@ -82,7 +82,7 @@ Main components
        background: #d7e4ed;
    }
    
-   @media only screen and (min-width: 1170px) {
+   @media only screen and (min-width: 900px) {
        #cd-timeline {
            /*margin-top: 3em;*/
            /*margin-bottom: 3em;*/
@@ -112,7 +112,7 @@ Main components
        margin-bottom: 0;
    }
    
-   @media only screen and (min-width: 1170px) {
+   @media only screen and (min-width: 900px) {
        .cd-timeline-block {
            margin: 4em 0;
        }
@@ -157,7 +157,7 @@ Main components
        background: #75ce66;
    }
    
-   @media only screen and (min-width: 1170px) {
+   @media only screen and (min-width: 900px) {
        .cd-timeline-img {
            width: 60px;
            height: 60px;
@@ -297,7 +297,10 @@ Main components
        border-right: 7px solid #ffffff;
    }
    
-   @media only screen and (min-width: 768px) {
+   @media only screen and (min-width: 600px) {
+       /*body {
+           color: red!important;
+       }*/
        .cd-timeline-content h2 {
            font-size: 20px;
            font-size: 1.25rem;
@@ -313,7 +316,7 @@ Main components
        }
    }
    
-   @media only screen and (min-width: 1170px) {
+   @media only screen and (min-width: 900px) {
        .cd-timeline-content {
            margin-left: 0;
            padding: 1.6em;
@@ -365,7 +368,7 @@ Main components
        }
    }
    
-   @media only screen and (min-width: 1170px) {
+   @media only screen and (min-width: 900px) {
        /* inverse bounce effect on even content blocks */
        .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
            -webkit-animation: cd-bounce-2-inverse 0.6s;
