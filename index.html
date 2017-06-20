@@ -21,6 +21,9 @@
         @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
         /*Quote*/
         
+        @import url('https://fonts.googleapis.com/css?family=Rajdhani');
+        /*Clock*/
+        
         body {
             background-image: url('guru.png');
             -webkit-background-size: 100% 100%;
@@ -185,6 +188,114 @@
             height: 170%;
             /*margin: 50px 0;*/
         }
+        /*Go to top button*/
+        
+        #myBtn {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Fixed/sticky position */
+            bottom: 20px;
+            /* Place the button at the bottom of the page */
+            right: 30px;
+            /* Place the button 30px from the right */
+            z-index: 99;
+            /* Make sure it does not overlap */
+            border: none;
+            /* Remove borders */
+            outline: none;
+            /* Remove outline */
+            background-color: rgba(34, 34, 34, 0.4);
+            /* Set a background color */
+            color: white;
+            /* Text color */
+            cursor: pointer;
+            /* Add a mouse pointer on hover */
+            padding: 7px 10px;
+            /* Some padding */
+            border-radius: 6px;
+            /* Rounded corners */
+        }
+        
+        #myBtn:hover {
+            background-color: rgba(34, 34, 34, 0.6);
+            /* Add a dark-grey background on hover */
+        }
+        /*For the up arrow*/
+        
+        i {
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+        
+        .right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+        
+        .left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+        
+        .up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+        
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+        
+        p#countdown {
+            width: 100%;
+            text-align: center;
+            font-size: 40px;
+            font-family: 'Rajdhani', sans-serif;
+        }
+        /*Progress Bar*/
+        
+        progress {
+            /* Positioning */
+            position: fixed;
+            left: 0;
+            top: 0;
+            /* Dimensions */
+            width: 100%;
+            height: 5px;
+            /* Reset the appearance */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            /* Get rid of the default border in Firefox/Opera. */
+            border: none;
+            /* Progress bar container for Firefox/IE10+ */
+            background-color: transparent;
+            /*background-image: -webkit-linear-gradient(left, transparent, red);*/
+            /* Progress bar value for IE10+ */
+            color: red;
+            /*color: rgb(120, 31, 25);*/
+        }
+        
+        progress::-webkit-progress-bar {
+            background-color: transparent;
+            /*background-image: -webkit-linear-gradient(left, transparent, red);*/
+        }
+        
+        progress::-webkit-progress-value {
+            background-image: -webkit-linear-gradient(left, transparent, red);
+            /*background-color: red;*/
+        }
+        
+        progress::-moz-progress-bar {
+            /*background-color: rgb(120, 31, 25);*/
+            background-color: transparent;
+            background-image: -moz-linear-gradient(left, transparent, red);
+            /*background-color: red;*/
+        }
     </style>
     <link href="style2.css" rel="stylesheet" type="text/css" />
     <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
@@ -206,10 +317,30 @@
             $('#third').parallax("100%", 0.1);
             $('#fourth').parallax("100%", 0.1);
             $('#fifth').parallax("100%", 0.1);
-
         })
     </script>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
 
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+            document.documentElement.scrollTop = 0; // For IE and Firefox
+        }
+    </script>
+    <script>
+    </script>
 </head>
 
 <body>
@@ -219,10 +350,12 @@
         </a>
         <div class="insight101">
             <span class="emp">Story of You</span> - a first glimpse into the life of a freshman at IIT Madras
+            <progress value="0" id="progress"></progress>
         </div>
         <div class="sectionhead">Know Your Insti</div>
     </div>
 
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="arrow up"></i></button>
     <div class="unit" id="intro">
         <header class="cd-container">
             <section class="firstH">
@@ -688,12 +821,47 @@
     </div>
 
     <div id="footer">
+        <p id="countdown"></p>
         <h1>Bleh</h1>
+
     </div>
 
 </body>
 <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
+    // For the countdown timer
+    // Set the date we're counting down to
+    var countDownDate = new Date("June 28, 2017 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+        // Get todays date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now an the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
+            minutes + "m " + seconds + "s ";
+
+        // If the count down is over, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+</script>
+
+
 <script>
     jQuery(document).ready(function($) {
         var $timeline_block = $('.cd-timeline-block');
@@ -771,10 +939,16 @@
 
                     $this.css('backgroundPosition', xpos + " " + Math.round((firstTop - pos) * speedFactor) + "px");
 
+                    // For the progress bar
+                    var winHeight = $(window).height();
+                    var docHeight = $(document).height();
+                    max = docHeight - winHeight;
+                    $("#progress").attr('max', max);
+                    $("progress").attr('value', pos);
+
                     // if()
-
+                    // var value = $(window).scrollTop();
                     $("div.sectionhead").text("Bleh" + pos);
-
                 });
             }
             $window.bind('scroll', update).resize(update);

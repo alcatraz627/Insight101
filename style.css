@@ -68,7 +68,7 @@ Main components
        position: relative;
        padding: 2em 0;
        /*margin-top: 2em;*/
-       margin-bottom: 2em;
+       /*margin-bottom: 2em;*/
    }
    
    #cd-timeline::before {
@@ -85,7 +85,7 @@ Main components
    @media only screen and (min-width: 1170px) {
        #cd-timeline {
            /*margin-top: 3em;*/
-           margin-bottom: 3em;
+           /*margin-bottom: 3em;*/
        }
        #cd-timeline::before {
            left: 50%;
