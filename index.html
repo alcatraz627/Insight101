@@ -132,7 +132,17 @@
         .logoimg {
             width: 7em;
             top: 1em;
+            -webkit-filter: blur(1px);
+            /* Safari 6.0 - 9.0 */
+            filter: blur(1px);
             position: absolute;
+            transition: all 0.4s ease-in-out;
+        }
+        
+        .logoimg:hover {
+            -webkit-filter: blur(0px);
+            /* Safari 6.0 - 9.0 */
+            filter: blur(0px);
         }
         
         .insight101 {
@@ -198,7 +208,24 @@
             position: relative;
             overflow: visible;
             height: 170%;
+            -webkit-filter: blur(3px);
+            -moz-filter: blur(3px);
+            -o-filter: blur(3px);
+            -ms-filter: blur(3px);
+            filter: blur(3px);
+            transition: 0.25s -webkit-filter linear;
+            transition-delay: 3s;
+            /*transition: filter 0.9s ease-in-out;*/
             /*margin: 50px 0;*/
+        }
+        
+        div.unit:hover {
+            -webkit-filter: blur(0px);
+            -moz-filter: blur(0px);
+            -o-filter: blur(0px);
+            -ms-filter: blur(0px);
+            filter: blur(0px);
+            transition-delay: 0s;
         }
         /*Go to top button*/
         
@@ -431,11 +458,19 @@
             background-color: #ddd;
         }
         
-        button.accordion.active>div.panel {
-            /*transition: all 2s ease-in;*/
-            /*-webkit-transition: all 2s ease-in;*/
+        button.accordion:after {
+            content: '\02795';
+            /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: #777;
+            float: right;
+            margin-left: 5px;
         }
-        /* Style the accordion panel. Note: hidden by default */
+        
+        button.accordion.active:after {
+            content: "\2796";
+            /* Unicode character for "minus" sign (-) */
+        }
         
         .accordioncont {
             background: rgba(255, 255, 255, 0.5);
@@ -971,7 +1006,7 @@
         <!-- cd-timeline -->
     </div>
 
-    <div id="fifth">
+    <div id="fifth" class="unit">
         <div class="accordioncont">
             <button class="accordion">Placement</button>
             <div class="panel">
@@ -1001,7 +1036,6 @@
                     similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi
                     repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.
                 </p>
-                <br><br>
             </div>
         </div>
     </div>
