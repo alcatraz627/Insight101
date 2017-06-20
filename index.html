@@ -178,6 +178,13 @@
             color: #bbb;
             text-align: center;
         }
+        
+        div.unit {
+            position: relative;
+            overflow: visible;
+            height: 170%;
+            /*margin: 50px 0;*/
+        }
     </style>
     <link href="style2.css" rel="stylesheet" type="text/css" />
     <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
@@ -673,6 +680,11 @@
 
     <div id="fifth">
         <h1>Bleh</h1>
+        <h2>Bleh</h2>
+        <h3>Bleh</h3>
+        <h2>Bleh</h2>
+        <h1>Bleh</h1>
+        This section will expand as you add content
     </div>
 
     <div id="footer">
@@ -700,7 +712,6 @@
                     $(this).find('.cd-timeline-img').hasClass('is-hidden')) {
                     $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass(
                         'is-hidden').addClass('bounce-in');
-                    $.fn.parallax.update();
                     update();
                 }
             });
