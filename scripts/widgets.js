@@ -123,7 +123,7 @@ jQuery(document).ready(function($) {
         // For the modal
         // console.log(this.id);
         // console.log(this);
-        // var h = this.title;
+        var h = this.title;
         // console.log(h);
         $.ajax({
             url: "snippet/" + this.id + ".html",
@@ -224,16 +224,19 @@ jQuery(document).ready(function($) {
                 if (pos > 5302 && pos < 6835) header = "Together, we all";
                 if (pos > 6835) header = "Life Ahead";
                 if (pos > max - 1 && localStorage.displayed !== 'showed') {
-                    swal({
-                        // title: "HTML <small>Title</small>!",
-                        title: "Guess What",
-                        // text: "A custom <span style=\"color: #F8BB86 \">html<span> message.",
-                        text: "And this is just half of it, for the rest half resides in the feel of being a part of it",
-                        confirmButtonText: "Wow",
-                        // customClass: "modalClass"
-                    });
-                    // So that is is onlt displayed once
-                    localStorage.displayed = "showed";
+                    setTimeout(function() {
+
+                        swal({
+                            // title: "HTML <small>Title</small>!",
+                            title: "And Guess What",
+                            // text: "A custom <span style=\"color: #F8BB86 \">html<span> message.",
+                            text: "This is just the half of it, for the rest half resides in the feel of being a part of it",
+                            confirmButtonText: "Wow",
+                            // customClass: "modalClass"
+                        });
+                        // So that is is onlt displayed once
+                        localStorage.displayed = "showed";
+                    }, 2500);
                 }
                 // console.log("DocHeight:" + docHeight);
                 // console.log("WinHeight:" + winHeight);
