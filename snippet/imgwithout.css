@@ -1,6 +1,6 @@
    .container {
        overflow-y: scroll;
-       max-height: 22em;
+       max-height: 25em!important;
    }
    
    .lib-panel {
@@ -16,6 +16,7 @@
    .lib-panel .row {
        padding-top: 7px;
        background-color: #FFFFFF;
+       min-height: 109px;
    }
    
    .lib-panel .lib-row {
@@ -30,7 +31,7 @@
    
    .lib-panel .lib-row.lib-header .lib-header-seperator {
        height: 2px;
-       width: 40%;
+       width: 35%;
        background-color: #d9d9d9;
        margin: 2px 0 2px 0;
    }
@@ -81,7 +82,7 @@
        padding-left: 10px;
        padding-top: 6px;
        width: 90px!important;
-       height: 90px!important;
+       height: 50%!important;
        float: left;
        padding-right: 10px;
    }

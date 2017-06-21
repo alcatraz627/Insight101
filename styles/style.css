@@ -519,9 +519,10 @@ p.panelcont:hover {
 .modalClass {
     background-color: rgba(255, 255, 255, 0.9)!important;
     width: 75%!important;
-    left: calc(12.5% + 19%)!important;
-    /*left: 0!important;*/
-    max-height: 90%;
+    margin-top: 0%!important;
+    left: calc(257px + 12.5%)!important;
+    top: 5%!important;
+    max-height: 90%!important;
     overflow-y: scroll;
     padding: 20px;
 }
