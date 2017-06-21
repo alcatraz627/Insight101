@@ -232,11 +232,12 @@ jQuery(document).ready(function($) {
                             // text: "A custom <span style=\"color: #F8BB86 \">html<span> message.",
                             text: "This is just the half of it, for the rest half resides in the feel of being a part of it",
                             confirmButtonText: "Wow",
+                            timer: 5000,
                             // customClass: "modalClass"
                         });
                         // So that is is onlt displayed once
                         localStorage.displayed = "showed";
-                    }, 2500);
+                    }, 6000);
                 }
                 // console.log("DocHeight:" + docHeight);
                 // console.log("WinHeight:" + winHeight);
@@ -253,3 +254,8 @@ jQuery(document).ready(function($) {
         })
     };
 })(jQuery);
+
+
+function credits() {
+    swal("These people are awesome", "Special thanks to Bharat Patil and Shreya Swaminathan Harita for their contribution");
+}
