@@ -18,6 +18,7 @@
 
 /*Accordion*/
 
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
 body {
     /*background-image: url('../images/guru.png');*/
     -webkit-background-size: 100% 100%;
@@ -417,18 +418,25 @@ progress::-moz-progress-bar {
     transform: translateY(4px);
 }
 
+.cd-timeline-content h2 {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: 600;
+    font-size: 24px!important;
+    color: #16211a!important;
+}
+
 
 /*Content boxes*/
 
 .cd-timeline-content {
-    background-color: rgba(255, 255, 255, 0.70)!important;
+    background-color: rgba(255, 255, 255, 0.85)!important;
     -webkit-transition: background-color 0.6s ease-in 4s;
     -moz-transition: background-color 0.6s ease-in 4s;
     transition: background-color 0.6s ease-in 4s;
 }
 
 .cd-timeline-content:hover {
-    background-color: rgba(255, 255, 255, 0.95)!important;
+    background-color: rgba(255, 255, 255, 1)!important;
     -webkit-transition: background-color 0.17s ease-in 0s;
     -moz-transition: background-color 0.17s ease-in 0s;
     transition: background-color 0.17s ease-in 0s;
