@@ -174,25 +174,26 @@ div.unit {
     position: relative;
     overflow: visible;
     height: 170%;
-    -webkit-filter: blur(3px);
+    /*-webkit-filter: blur(3px);
     -moz-filter: blur(3px);
     -o-filter: blur(3px);
     -ms-filter: blur(3px);
     filter: blur(3px);
-    transition: 0.25s -webkit-filter linear;
-    transition-delay: 5s;
+    transition: 0.25s -webkit-filter linear;*/
+    /*transition-delay: 5s;*/
     /*transition: filter 0.9s ease-in-out;*/
     /*margin: 50px 0;*/
 }
 
-div.unit:hover {
+
+/*div.unit:hover {
     -webkit-filter: blur(0px);
     -moz-filter: blur(0px);
     -o-filter: blur(0px);
     -ms-filter: blur(0px);
     filter: blur(0px);
     transition-delay: 0s;
-}
+}*/
 
 
 /*Go to top button*/

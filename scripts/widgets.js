@@ -121,16 +121,16 @@ jQuery(document).ready(function($) {
 
     $(".cd-read-more").click(function() {
         // For the modal
-        console.log(this.id);
-        console.log(this);
-        var h = this.title;
-        console.log(h);
+        // console.log(this.id);
+        // console.log(this);
+        // var h = this.title;
+        // console.log(h);
         $.ajax({
             url: "snippet/" + this.id + ".html",
             // context: text
         }).done(function(data) {
-            console.log(typeof data);
-            console.log(data);
+            // console.log(typeof data);
+            // console.log(data);
             swal({
                 // title: "HTML <small>Title</small>!",
                 title: h,
@@ -235,9 +235,9 @@ jQuery(document).ready(function($) {
                     // So that is is onlt displayed once
                     localStorage.displayed = "showed";
                 }
-                console.log("DocHeight:" + docHeight);
-                console.log("WinHeight:" + winHeight);
-                console.log("Pos:" + pos);
+                // console.log("DocHeight:" + docHeight);
+                // console.log("WinHeight:" + winHeight);
+                // console.log("Pos:" + pos);
 
                 $("div.sectionhead").text(header); //+ "(" + pos + ")");
             });
