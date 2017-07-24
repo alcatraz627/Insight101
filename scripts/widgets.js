@@ -64,7 +64,7 @@ for (i = 0; i < acc.length; i++) {
 
 // For the countdown timer
 // Set the date we're counting down to
-var countDownDate = new Date("June 28, 2017 15:37:25").getTime();
+var countDownDate = new Date("July 25, 2017 09:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -218,11 +218,16 @@ jQuery(document).ready(function($) {
                 // if (pos > 3930 && pos < 4960) header = "Together, we all";
                 // if (pos > 4960) header = "Life Ahead";
                 // var value = $(window).scrollTop();
-                if (pos > 0 && pos < 1747) header = "Know your Insti";
-                if (pos > 1747 && pos < 2940) header = "Second Impressions";
-                if (pos > 2940 && pos < 5302) header = "Sprouting Wings";
-                if (pos > 5302 && pos < 6835) header = "Together, we all";
-                if (pos > 6835) header = "Life Ahead";
+                var i = $("#intro").outerHeight();
+                var s = $("#second").outerHeight();
+                var t = $("#third").outerHeight();
+                var f = $("#fourth").outerHeight();
+                var v = $("#fifth").outerHeight();
+                if (pos > 0 && pos < i) header = "Know your Insti";
+                if (pos > i && pos < i + s) header = "Second Impressions";
+                if (pos > i + s && pos < i + s + t) header = "Sprouting Wings";
+                if (pos > i + s + t && pos < i + s + t + f) header = "Together, we all";
+                if (pos > i + s + t + f) header = "Life Ahead";
                 if (pos > max - 1 && localStorage.displayed !== 'showed') {
                     setTimeout(function() {
 
@@ -244,6 +249,7 @@ jQuery(document).ready(function($) {
                 // console.log("Pos:" + pos);
 
                 $("div.sectionhead").text(header); //+ "(" + pos + ")");
+                // $("div.sectionhead").text(header + "(" + pos + "/" + max + ")(" + pos / max + ")");
             });
         }
         $window.bind('scroll', update).resize(update);

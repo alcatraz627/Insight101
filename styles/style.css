@@ -38,7 +38,7 @@ section {
 
 .blockquote {
     border-radius: 20px;
-    /*display: block;*/
+    display: block;
     background: #fff;
     padding: 15px 20px 15px 20px!important;
     position: relative;
