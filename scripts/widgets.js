@@ -64,7 +64,7 @@ for (i = 0; i < acc.length; i++) {
 
 // For the countdown timer
 // Set the date we're counting down to
-var countDownDate = new Date("July 25, 2017 09:00:00").getTime();
+var countDownDate = new Date("July 31, 2017 08:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -91,6 +91,22 @@ var x = setInterval(function() {
         document.getElementById("demo").innerHTML = "EXPIRED";
     }
 }, 1000);
+
+// ########################################################
+// ################       Conclusion       ################
+// ########################################################
+
+$("#conclusion").click(function() {
+    swal({
+        // title: "HTML <small>Title</small>!",
+        title: "And Guess What",
+        // text: "A custom <span style=\"color: #F8BB86 \">html<span> message.",
+        text: "This is just the half of it, for the rest half resides in the feel of being a part of it",
+        confirmButtonText: "Wow",
+        timer: 5000,
+        // customClass: "modalClass"
+    });
+});
 
 // ########################################################
 // ###############          Pop-in          ###############
@@ -228,22 +244,22 @@ jQuery(document).ready(function($) {
                 if (pos > i + s && pos < i + s + t) header = "Sprouting Wings";
                 if (pos > i + s + t && pos < i + s + t + f) header = "Together, we all";
                 if (pos > i + s + t + f) header = "Life Ahead";
-                if (pos > max - 1 && localStorage.displayed !== 'showed') {
-                    setTimeout(function() {
+                // if (pos > max - 1 && localStorage.displayed !== 'showed') {
+                //     setTimeout(function() {
 
-                        swal({
-                            // title: "HTML <small>Title</small>!",
-                            title: "And Guess What",
-                            // text: "A custom <span style=\"color: #F8BB86 \">html<span> message.",
-                            text: "This is just the half of it, for the rest half resides in the feel of being a part of it",
-                            confirmButtonText: "Wow",
-                            timer: 5000,
-                            // customClass: "modalClass"
-                        });
-                        // So that is is onlt displayed once
-                        localStorage.displayed = "showed";
-                    }, 6000);
-                }
+                //         swal({
+                //             // title: "HTML <small>Title</small>!",
+                //             title: "And Guess What",
+                //             // text: "A custom <span style=\"color: #F8BB86 \">html<span> message.",
+                //             text: "This is just the half of it, for the rest half resides in the feel of being a part of it",
+                //             confirmButtonText: "Wow",
+                //             timer: 5000,
+                //             // customClass: "modalClass"
+                //         });
+                //         // So that is is onlt displayed once
+                //         localStorage.displayed = "showed";
+                //     }, 6000);
+                // }
                 // console.log("DocHeight:" + docHeight);
                 // console.log("WinHeight:" + winHeight);
                 // console.log("Pos:" + pos);

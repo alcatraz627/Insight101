@@ -6,6 +6,8 @@
    .lib-panel {
        margin-bottom: 1px;
        padding-bottom: 1px;
+       z-index: 1;
+       clear: both;
    }
    
    .lib-panel img {

@@ -33,7 +33,18 @@ body {
 }
 
 section {
+    /*For debugging  */
     /*background-color: green;*/
+}
+
+.guideblink {
+    color: #1B9BE6;
+    transition: 0.2s all linear;
+}
+
+.guideblink:hover {
+    color: #2A0CD2;
+    font-weight: 500;
 }
 
 .blockquote {
@@ -469,7 +480,7 @@ button.accordion:hover {
     background-color: #ddd;
 }
 
-button.accordion:after {
+button.accordion:not(#conclusion):after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
     font-size: 13px;
@@ -478,7 +489,7 @@ button.accordion:after {
     margin-left: 5px;
 }
 
-button.accordion.active:after {
+button.accordion.active:not(#conclusion):after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
 }
@@ -525,4 +536,21 @@ p.panelcont:hover {
     max-height: 90%!important;
     overflow-y: scroll;
     padding: 20px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
 }
